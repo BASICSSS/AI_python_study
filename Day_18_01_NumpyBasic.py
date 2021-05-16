@@ -3,11 +3,12 @@ import numpy as np
 
 print([1, 3, 5])
 print(np.array([1, 3, 5]))
+print(np.int32([1, 3, 5]))
 
 # 문제
 # 넘파이 배열을 리스트로 변환하세요
 print(list(np.array([1, 3, 5])))
-print(list(np.int32([1, 3, 5])))
+print(np.array([1, 3, 5]).tolist())
 print()
 
 # 문제
@@ -20,9 +21,9 @@ print(np.array([np.arange(3), np.arange(4, 7)]))
 print(np.array([range(3), range(4, 7)]))
 
 print(np.array(range(6)))
-print("-" * 30)
+print('-' * 30)
 
-print(np.zeros([2, 5]).dtype)  # float64
+print(np.zeros([2, 5]).dtype)       # float64
 print(np.zeros([2, 5]))
 print(np.ones([2, 5]))
 print(np.full([2, 5], -1))
@@ -35,7 +36,7 @@ print(np.zeros_like(a))
 print(np.zeros(np.array(a).shape, dtype=np.int32))
 print(np.ones_like(a))
 print(np.full_like(a, -1))
-print("-" * 30)
+print('-' * 30)
 
 print(np.arange(0, 3, 1))
 print(np.arange(0, 1, 0.1))
@@ -46,7 +47,7 @@ print(np.linspace(0, 1, 11))
 
 # 0 2 4 6
 #  ^ ^ ^
-print("-" * 30)
+print('-' * 30)
 
 b = np.arange(10)
 print(b)
@@ -73,7 +74,7 @@ print(c * 7)
 print(c ** 2)
 print(c > 5)
 print(np.logical_and(c > 3, c < 7))
-print("-" * 30)
+print('-' * 30)
 
 # vector 연산
 print(b + b)
@@ -87,9 +88,9 @@ print(c > c)
 
 # print(b + [1, 2, 3])              # 에러
 # print(b + np.array([1, 2, 3]))    # 에러
-print(b + list(range(10)))  # 성공
-print(b + range(10))  # 성공
-print("-" * 30)
+print(b + list(range(10)))          # 성공
+print(b + range(10))                # 성공
+print('-' * 30)
 
 # universal function
 print(np.sin(b))

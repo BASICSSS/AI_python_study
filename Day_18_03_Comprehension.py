@@ -7,6 +7,9 @@ import random
 for i in range(5):
     i
 
+for _ in range(10):
+    random.randrange(100)
+
 print([i for i in range(5)])
 print((i for i in range(5)))
 print(tuple(i for i in range(5)))

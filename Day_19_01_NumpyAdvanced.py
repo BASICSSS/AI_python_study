@@ -67,12 +67,9 @@ print('-' * 30)
 
 c = np.int32([5, 2, 9, 6])
 print(c)
-print(np.sort(c))
+print(np.sort(c))       # 정렬 결과 반환(파이썬: sorted)
 
 print(c)
-print(c.sort())
+print(c.sort())         # 자기자신 정렬(파이썬: sort)
 
 print(c)
-
-
-print('\n\n\n\n\n\n\n')

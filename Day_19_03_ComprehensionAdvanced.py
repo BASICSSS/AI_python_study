@@ -12,12 +12,14 @@ print([(i, j) for i in range(2) for j in range(3)])
 
 # 문제
 # 2차원 리스트를 1차원 리스트로 변환하세요
-a = [[1, 2], [3, 4, 5], [6, 7, 8, 9]]
+a = [[1, 2],
+     [3, 4, 5],
+     [6, 7, 8, 9]]
 
 for i in a:
     # print(i)
     for j in i:
-        print(j, end=" ")
+        print(j, end=' ')
 print()
 print([j for i in a for j in i])
 print()
@@ -27,7 +29,7 @@ print()
 for i in a:
     for j in i:
         if j % 2:
-            print(j, end=" ")
+            print(j, end=' ')
 print()
 
 print([j for i in a for j in i if j % 2])
@@ -40,11 +42,3 @@ print([[j for j in i] for i in a])
 print([[j for j in i if j % 2] for i in a])
 print([sum([j for j in i if j % 2]) for i in a])
 print(sum([sum([j for j in i if j % 2]) for i in a]))
-
-
-class Fake:
-    def __init__(self):
-        print("ss")
-
-
-# print(a)
