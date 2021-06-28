@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "C:\\Users\\einst\\anaconda3\\envs\\KangPC_env1\\python.exe",
+    "python.formatting.provider": "black", //autopep8, yapf필요시 적으면됨
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "100"
+    ],
+    "editor.formatOnSave": true
+}

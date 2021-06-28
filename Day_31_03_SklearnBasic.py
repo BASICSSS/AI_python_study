@@ -5,6 +5,9 @@ from pandas.plotting import scatter_matrix
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
 
 
 def sklearn_1():
@@ -82,6 +85,7 @@ def sklearn_4():
 
     x = digits.data
     y = digits.target
+    print(y)  # 출력해보면 기본적으로 섞여있는것을 볼 수 있음
 
     train_size = int(len(x) * 0.8)
     x_train, x_test = x[:train_size], x[train_size:]
@@ -93,7 +97,19 @@ def sklearn_4():
     print(clf.score(x_test, y_test))
 
 
+def sklearn_5():
+    iris = datasets.load_iris()
+
+    x_train, x_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2)
+    clf = svm.SVC()
+    clf.fit(x_train, y_train)
+
+    pred = clf.predict(x_test)
+
+    print(accuracy_score(pred, y_test))
+
+
 # sklearn_1()
 # sklearn_2()
 # sklearn_3()
-sklearn_3()
+sklearn_5()

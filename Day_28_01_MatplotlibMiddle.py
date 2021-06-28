@@ -10,10 +10,9 @@ def plot_1():
     s = np.cos(2 * np.pi * t)
     plt.plot(t, s, lw=3)
 
-    plt.annotate('local max',
-                 xy=(2, 1),
-                 xytext=(3, 1.5),
-                 arrowprops=dict(facecolor='black', shrink=0.05))
+    plt.annotate(
+        "local max", xy=(2, 1), xytext=(3, 1.5), arrowprops=dict(facecolor="black", shrink=0.05)
+    )
     plt.ylim(-2, 2)
     plt.show()
 
@@ -25,7 +24,7 @@ def plot_1():
 #  1     -
 #  0 -- -
 # -1   -
-def plot_2():               # random walker
+def plot_2():  # random walker
     pos = 0
     y = [pos]
     for i in range(100):
@@ -47,7 +46,7 @@ def plot_3():
     # randoms = np.random.randint(-1, 2, 100 + 1)
     randoms = np.random.choice([-1, 0, 1], 100 + 1)
     randoms[0] = 0
-    y1 = [sum(randoms[:i+1]) for i in range(len(randoms))]
+    y1 = [sum(randoms[: i + 1]) for i in range(len(randoms))]
     y2 = np.cumsum(randoms)
 
     # cumsum 직접 구현 1번
@@ -63,11 +62,11 @@ def plot_3():
         y4.append(y4[-1] + randoms[i])
 
     plt.subplot(1, 2, 1)
-    plt.plot(range(len(y1)), y1, 'r')
-    plt.plot(range(len(y2)), y2, 'b')
+    plt.plot(range(len(y1)), y1, "r")
+    plt.plot(range(len(y2)), y2, "b")
 
     plt.subplot(1, 2, 2)
-    plt.plot(range(len(y1)), randoms, 'ro')
+    plt.plot(range(len(y1)), randoms, "ro")
 
     plt.show()
 
@@ -80,11 +79,11 @@ def plot_4():
     # 'seaborn-deep', 'seaborn-muted', 'seaborn-notebook', 'seaborn-paper',
     # 'seaborn-pastel', 'seaborn-poster', 'seaborn-talk', 'seaborn-ticks',
     # 'seaborn-white', 'seaborn-whitegrid', 'tableau-colorblind10']
-    print(len(plt.style.available))     # 26
+    print(len(plt.style.available))  # 26
 
     x = np.linspace(0, 10)
-    with plt.style.context('fast'):
-        plt.plot(x, np.log(x), 'rx')
+    with plt.style.context("fast"):
+        plt.plot(x, np.log(x), "rx")
         plt.plot(x, np.sin(x))
 
     plt.show()
@@ -111,7 +110,7 @@ def plot_5():
 
     plt.tight_layout()
     # plt.show()
-    plt.savefig('data/plt_styles.png')
+    plt.savefig("data/plt_styles.png")
 
 
 def plot_6():
@@ -125,8 +124,8 @@ def plot_6():
     ax3 = plt.subplot2grid([3, 3], [2, 0])
     ax4 = plt.subplot2grid([3, 3], [1, 2], rowspan=2)
 
-    ax1.plot(x, y, 'r')
-    ax2.plot(x, y, 'bx')
+    ax1.plot(x, y, "r")
+    ax2.plot(x, y, "bx")
     ax3.bar(x, y, color=colors.TABLEAU_COLORS)
     ax4.barh(x, y, color=colors.TABLEAU_COLORS)
 
@@ -135,15 +134,8 @@ def plot_6():
 
 # plot_1()
 # plot_2()
-plot_3()
+plot_5()
 # plot_4()
 # plot_5()
 # plot_6()
-
-
-
-
-
-
-
 

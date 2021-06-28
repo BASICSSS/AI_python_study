@@ -8,7 +8,7 @@ def plot_1():
 
     # plt.plot([1, 2, 3, 4], [1, 4, 9, 16])         # 꺾은선(line)
     # plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro')   # 산점도(scatter)
-    plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'kP')     # P(plut) p(pentagon)
+    plt.plot([1, 2, 3, 4], [1, 4, 9, 16])  # P(plut) p(pentagon)
 
     plt.show()
 
@@ -39,16 +39,16 @@ def plot_2():
     # x = np.arange(-10, 11, 0.3)
     x = np.linspace(-10, 10, 51)
     plt.plot(x, x ** 2)
-    plt.plot(x, x ** 2, 'ro')
+    plt.plot(x, x ** 2, "ro")
 
     plt.show()
 
 
 def plot_3():
     t = np.arange(0, 5, 0.2)
-    plt.plot(t, t, 'r--')
-    plt.plot(t, t ** 2, 'g>')
-    plt.plot(t, t ** 3, 'bx')
+    plt.plot(t, t, "r--")
+    plt.plot(t, t ** 2, "g>")
+    plt.plot(t, t ** 3, "bx")
     plt.show()
 
 
@@ -70,7 +70,7 @@ def plot_4():
     plt.show()
 
 
-# plot_1()
+plot_1()
 # plot_2()
 # plot_3()
 # plot_4()
